@@ -1,0 +1,40 @@
+<p>contact-details works!</p>
+<b>Enter your contact details </b><br>
+<b>Contact details </b><br>
+<b>name</b>{{firstName}} &nbsp;&nbsp; {{lastName}} <br>
+<b>age</b>{{age}}<br>
+<b>email </b>{{email}}<br>
+
+<b>join status</b> &nbsp; 
+<button [disabled]="joinStatus" [class]="styleclassname">confirm</button><br>
+
+<input type="checkbox" [checked]="joinStatus" /><br>
+<b>choose your location  </b><br>
+<!--one way binding model to view if model changes, the view also changes
+     [checked]="joinStatus" this is property binding 
+    [class]="styleclassname" this is class binding assigning with property binding -->
+
+<select size="1" [value]="location"><br>
+    <option value="Banglore">Banglore</option>
+    <option value="chennai">chennai</option>
+    <option value="hyderabad">hyderabad</option>
+    <option value="vijyawada">vijyawada</option>
+
+</select><br>
+<!--css class binding one way-->
+<div class="divstyle">
+    style attached using  class binding ...
+</div>
+<!--this is interpolation   
+         value="{{firstName}}"    
+          model to view binding-->
+
+<b>First Name </b><input type="text" [(ngModel)]="firstName"/><br>
+<b>Last Name </b><input type="text" [(ngModel)]="lastName"/><br>
+<b>age</b><input type="number" [(ngModel)]="age"/><br>
+<input type="range" [(ngModel)]="age" width="250"/>
+
+
+<!--this is interpolation model to view binding-->
+<b>welcome MR/Mrs </b>{{firstName}} &nbsp;&nbsp;{{lastName}}
+
